@@ -1,0 +1,20 @@
+<div class="card mt-5">
+    <div class="card-body">
+        <label class="form-label">Įveskite skaičių x: </label>
+        <input class="form-control mb-3" type="number" name="x" [(ngModel)]="x">
+        <label class="form-label">Įveskite skaičių y: </label>
+        <input class="form-control mb-3" type="number" name="y" [(ngModel)]="y">
+        <button class="btn btn-primary" (click)="skaiciuok()" [disabled]="x==null || y==null">Sudeti</button>
+        <div class="alert alert-info mt-3" *ngIf="suma!=null">Suma: {{ suma }} </div>
+    </div>
+</div>
+<!--
+ [value]="x" 
+ [class]="z"            -- atributui priskiriame reikšmę iš TS failo 
+ (click)="metodas()"    -- kai bus veiksmas click, tuomet iškviesti metodą iš TS failo
+ [(ngModel)]="z"        -- two-way-binding (dvikryptis susietumas), paima reikšmę iš TS failo, o koreguojant "HTML'e" įstato reikšmę į TS failą
+
+ {{ tekstas }}          -- teksto išvedimas
+
+ *ngIf="5==5"                  -- strukturinė direktyva
+-->
